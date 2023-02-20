@@ -10,7 +10,7 @@ const Post = ({post}) => {
                 <img src={post.img} alt="user photo" />
                 <div className="details">
                     <Link to={`/profile/${post.userId}`} style={{textDecoration:"none", color:"inherit"}}>
-                    <span>{post.name}</span>
+                    <span className="name">{post.name}</span>
                     <span className="date">1 min ago</span>
                     </Link>
                 </div>
