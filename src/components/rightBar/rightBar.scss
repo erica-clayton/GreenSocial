@@ -9,6 +9,15 @@
     overflow: scroll;
     background-color: themed("bgSoft");
 
+    @include mobile{
+        display: none;
+    }
+
+    @mixin tablet {
+       display: none;
+        }
+      }
+
     &::-webkit-scrollbar{
         display: none;
     }
