@@ -12,6 +12,7 @@ position: sticky;
 top: 0;
 background-color: themed("bg");
 color:themed("textColor");
+z-index: 999;
 
     .left{
         display: flex;
@@ -36,6 +37,14 @@ color:themed("textColor");
                 width:500px ;
                 background-color: transparent;
                 color: themed("textColor");
+
+                @include mobile{
+                    display: none;
+                }
+
+                @include tablet{
+                    width: 200px;
+                }
             }
         }
     }
@@ -45,12 +54,19 @@ color:themed("textColor");
         align-items: center;
         gap: 20px;
 
+        @include mobile{
+            display: none;
+        }
+
         .user{
             display: flex;
             align-items: center;
             gap: 10px;
             font-weight: 500;
             
+            @include mobile{
+                display: none;
+            }
             img{
                 width: 30px;
                 height: 30px;
@@ -58,9 +74,7 @@ color:themed("textColor");
                 object-fit: cover;
             }
 
-            span{
-
-            }
+            
         }
     }
 }
